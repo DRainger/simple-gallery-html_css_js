@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="index.js"></script>
+    <style>
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .galery{
+            display: flex;
+            align-items: center;
+        }
+        .dots{
+            display: flex;
+            align-items: center;
+        }
+        .dot{
+            height: 15px;
+            width: 15px;
+            margin: 2px;
+            background-color: lightgrey;
+            border-radius: 50%;
+            transition: background-color 0.3s ease-in;
+        }
+
+        .dot:hover{
+            background-color: darkgrey;
+        }
+
+        .selected{
+            background-color: darkgrey;
+        }
+
+        .arrow{
+            font-size: xx-large;
+        }
+        
+    </style>
+</head>
+<body>
+    <div>
+        <div class="container">
+            <div class="galery">
+                <div class="arrow" onclick="PreviusImage()"><b>&larr;</b></div>
+                <div id="picturs">
+                    <img src="/pics/greg-rakozy-oMpAz-DN-9I-unsplash.jpg">
+                </div>
+                <div class="arrow" onclick="NextImage()"><b>&rarr;</b></div>
+            </div>
+            <div class="dots">
+                <div class="dot selected" onclick="SetImage(0)"></div>
+                <div class="dot" onclick="SetImage(1)"></div>
+                <div class="dot" onclick="SetImage(2)"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
